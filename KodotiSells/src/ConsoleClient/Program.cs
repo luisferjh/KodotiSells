@@ -7,7 +7,9 @@ namespace ConsoleClient
     {
         static void Main(string[] args)
         {
-            TestService.TestConnection();
+            //TestService.TestConnection();
+            var orderService = new OrderService();
+            var result = orderService.GetAll();
             Console.Read();
         }
     }

@@ -13,5 +13,11 @@ namespace Models
         public decimal Total { get; set; }
 
         public Client Client { get; set; }
+        public List<InvoiceDetail> Details { get; set; }
+
+        public Invoice()
+        {
+            Details = new List<InvoiceDetail>();
+        }
     }
 }
