@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Service
 {
-    public class OrderService
+    public class InvoiceService
     {
         public List<Invoice> GetAll()
         {
@@ -131,6 +131,41 @@ namespace Service
                     ProductName = reader["ProductName"].ToString()
                 };
             }
+        }
+
+        public Invoice Get(int id)
+        {
+            Invoice invoice;
+            using (var context = new SqlConnection(Parameters.ConnectionString))
+            {
+                context.Open();
+
+                var command = new SqlCommand("SELECT * FROM Invoices WHERE IdInvoice = @id", context);
+                command.Parameters.AddWithValue("@id", id);
+
+                using (var reader = command.ExecuteReader())
+                {
+                    reader.Read();
+
+                    invoice = new Invoice
+                    {                      
+                        IdInvoice = Convert.ToInt32(reader["IdInvoice"]),
+                        Iva = Convert.ToDecimal(reader["Iva"]),
+                        Subtotal = Convert.ToDecimal(reader["Subtotal"]),
+                        Total = Convert.ToDecimal(reader["Total"]),
+                        IdClient = Convert.ToInt32(reader["IdClient"])
+                    };
+                }
+             
+               
+                //client
+                SetClient(invoice, context);
+
+                //Detail
+                SetDetail(invoice, context);
+              
+            }
+            return invoice;
         }
     }
 

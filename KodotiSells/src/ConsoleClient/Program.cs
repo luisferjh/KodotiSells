@@ -8,8 +8,9 @@ namespace ConsoleClient
         static void Main(string[] args)
         {
             //TestService.TestConnection();
-            var orderService = new OrderService();
-            var result = orderService.GetAll();
+            var InvoiceService = new InvoiceService();
+            //var result = InvoiceService.GetAll();
+            var result = InvoiceService.Get(2);
             Console.Read();
         }
     }
