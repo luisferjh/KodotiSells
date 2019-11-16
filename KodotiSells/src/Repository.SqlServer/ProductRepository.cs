@@ -17,8 +17,8 @@ namespace Repository.SqlServer
 
         public Product Get(int id)
         {
-            var command = CreateCommand("SELECT * FROM Clients WITH(NOLOCK) WHERE IdClient = @IdClient");
-            command.Parameters.AddWithValue("@IdClient", id);
+            var command = CreateCommand("SELECT * FROM Products WITH(NOLOCK) WHERE IdProduct = @IdProduct");
+            command.Parameters.AddWithValue("@IdProduct", id);
         
             using (var reader = command.ExecuteReader())
             {              

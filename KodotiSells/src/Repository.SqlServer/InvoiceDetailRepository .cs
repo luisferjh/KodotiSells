@@ -49,5 +49,34 @@ namespace Repository.SqlServer
             }
             return result;
         }
+
+        public void Create(IEnumerable<InvoiceDetail> model, int IdInvoice)
+        {
+            foreach (var detail in model)
+            {
+                var query = "insert into InvoiceDetail(IdInvoice, IdProduct, Quantity, Price, Iva, SubTotal, Total) values (@IdInvoice, @IdProduct, @Quantity, @Price, @Iva, @Subtotal, @Total)";
+                var command = CreateCommand(query);
+
+                command.Parameters.AddWithValue("@IdInvoice", IdInvoice);
+                command.Parameters.AddWithValue("@IdProduct", detail.IdProduct);
+                command.Parameters.AddWithValue("@Quantity", detail.Quantity);
+                command.Parameters.AddWithValue("@Price", detail.Price);
+                command.Parameters.AddWithValue("@Iva", detail.Iva);
+                command.Parameters.AddWithValue("@Subtotal", detail.Subtotal);
+                command.Parameters.AddWithValue("@Total", detail.Total);
+
+                command.ExecuteNonQuery();
+            }
+        }
+
+        public void RemoveByIdInvoice(int id)
+        {
+            var query = "delete from InvoiceDetail WHERE IdInvoice = @IdInvoice";
+
+            var command = CreateCommand(query);
+            command.Parameters.AddWithValue("@IdInvoice", id);
+
+            command.ExecuteNonQuery();
+        }
     }
 }

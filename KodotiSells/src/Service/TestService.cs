@@ -8,18 +8,18 @@ namespace Service
     {
         public static void TestConnection()
         {
-            try
-            {
-                using (var context = new SqlConnection(Parameters.ConnectionString))
-                {
-                    context.Open();
-                    Console.WriteLine("Sql Connection Successful");
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"sql server: {ex.Message}");               
-            }
+            //try
+            //{
+            //    using (var context = new SqlConnection(Parameters.ConnectionString))
+            //    {
+            //        context.Open();
+            //        Console.WriteLine("Sql Connection Successful");
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine($"sql server: {ex.Message}");               
+            //}
            
         }       
     }
