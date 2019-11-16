@@ -23,13 +23,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04. UnitOfWork", "04. UnitO
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05. Repository", "05. Repository", "{F7B729B6-2A8C-4BE5-AC27-AE0CB5355E44}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitOfWork.Interface", "src\UnitOfWork.Interface\UnitOfWork.Interface.csproj", "{AF4122A5-CE73-4BDD-9E6D-6D193B82F719}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitOfWork.Interface", "src\UnitOfWork.Interface\UnitOfWork.Interface.csproj", "{AF4122A5-CE73-4BDD-9E6D-6D193B82F719}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitOfWork.SqlServer", "src\UnitOfWork.SqlServer\UnitOfWork.SqlServer.csproj", "{AA4D7012-7E37-4A88-A9F5-649A12C25D68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitOfWork.SqlServer", "src\UnitOfWork.SqlServer\UnitOfWork.SqlServer.csproj", "{AA4D7012-7E37-4A88-A9F5-649A12C25D68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository.Interfaces", "src\Repository.Interfaces\Repository.Interfaces.csproj", "{330F5FB0-7496-482B-ACC4-E873E76F3586}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository.Interfaces", "src\Repository.Interfaces\Repository.Interfaces.csproj", "{330F5FB0-7496-482B-ACC4-E873E76F3586}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository.SqlServer", "src\Repository.SqlServer\Repository.SqlServer.csproj", "{84003538-7393-4DD1-B011-F0A3190FBC55}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository.SqlServer", "src\Repository.SqlServer\Repository.SqlServer.csproj", "{8E805E61-2802-47A2-8EE3-132A013AAA8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,10 +65,10 @@ Global
 		{330F5FB0-7496-482B-ACC4-E873E76F3586}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{330F5FB0-7496-482B-ACC4-E873E76F3586}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{330F5FB0-7496-482B-ACC4-E873E76F3586}.Release|Any CPU.Build.0 = Release|Any CPU
-		{84003538-7393-4DD1-B011-F0A3190FBC55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{84003538-7393-4DD1-B011-F0A3190FBC55}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{84003538-7393-4DD1-B011-F0A3190FBC55}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{84003538-7393-4DD1-B011-F0A3190FBC55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E805E61-2802-47A2-8EE3-132A013AAA8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E805E61-2802-47A2-8EE3-132A013AAA8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E805E61-2802-47A2-8EE3-132A013AAA8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E805E61-2802-47A2-8EE3-132A013AAA8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -81,7 +81,7 @@ Global
 		{AF4122A5-CE73-4BDD-9E6D-6D193B82F719} = {A9733458-E407-43EC-AECB-B3A1D5BF020D}
 		{AA4D7012-7E37-4A88-A9F5-649A12C25D68} = {A9733458-E407-43EC-AECB-B3A1D5BF020D}
 		{330F5FB0-7496-482B-ACC4-E873E76F3586} = {F7B729B6-2A8C-4BE5-AC27-AE0CB5355E44}
-		{84003538-7393-4DD1-B011-F0A3190FBC55} = {F7B729B6-2A8C-4BE5-AC27-AE0CB5355E44}
+		{8E805E61-2802-47A2-8EE3-132A013AAA8A} = {F7B729B6-2A8C-4BE5-AC27-AE0CB5355E44}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EB6E5A41-42A0-4A77-92E4-08D80D1D1CD0}
